@@ -1,16 +1,15 @@
 #include <SoftwareSerial.h>
-#include <TinyGPS++.h>
+
 int RXPin = D3;
 int TXPin = D4;
+
 int GPSBaud = 115200;
 boolean newData = false;
-String inputStringGPS;
-int comma1, comma2, comma3, comma4, comma5, comma6;
-String latitudeString, longitudeString;
 float latitude, longitude;
+int comma1, comma2, comma3, comma4, comma5, comma6;
+String inputStringGPS, latitudeString, longitudeString;
 
 SoftwareSerial gpsSerial(RXPin, TXPin);
-TinyGPSPlus gps;
 
 void setup()
 {
